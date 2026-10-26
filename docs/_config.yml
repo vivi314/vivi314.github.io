@@ -23,7 +23,7 @@ email: vivien.ebert@kit.edu
 description: >- # this means to ignore newlines until "baseurl:"
   Doctoral Researcher at the KIT group of Logic of Autonomous Dynamical Systems.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "[https://vivi314.github.io](https://vivi314.github.io)" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://vivi314.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 linkedin_username: Vivien Ebert
 #github_username:  vivi314
 
