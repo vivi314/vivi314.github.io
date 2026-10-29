@@ -13,20 +13,14 @@ title: Vivien Ebert
     --border-color: #e2e8f0;
   }
 
-  /* Clean up default Minima chrome for a more academic look */
-  .site-header {
-    border-top: 4px solid var(--kit-green);
-    border-bottom: 1px solid var(--border-color);
-    background-color: #ffffff;
-  }
-  .site-title {
-    font-family: "Georgia", "Times New Roman", serif;
-    font-weight: 700 !important;
-    color: var(--text-primary) !important;
-    letter-spacing: -0.3px;
-  }
+  /* Completely hide the default Minima header and footer for a clean single-page look */
+  .site-header,
   .site-footer {
-    display: none;
+    display: none !important;
+  }
+
+  .page-content {
+    padding-top: 2rem;
   }
 
   .academic-container {
@@ -54,7 +48,7 @@ title: Vivien Ebert
 
   .profile-photo {
     width: 190px;
-    height: 190px;
+    height: 210px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid var(--border-color);
@@ -64,7 +58,7 @@ title: Vivien Ebert
 
   .profile-affiliation h1 {
     font-family: "Georgia", "Times New Roman", serif;
-    font-size: 2.1rem;
+    font-size: 2.2rem;
     font-weight: 700;
     margin: 0 0 0.4rem 0;
     color: var(--text-primary);
@@ -227,11 +221,11 @@ title: Vivien Ebert
 
 <div class="profile-header">
   <div class="profile-photo-wrapper">
-    <img src="{{ '/assets/profile.jpg' | relative_url }}" alt="Vivien Ebert" class="profile-photo" />
+    <img src="assets/profile.jpg" alt="Vivien Ebert" class="profile-photo" />
   </div>
   <div class="profile-affiliation">
     <h1>Vivien Ebert</h1>
-    <div class="profile-role">Doctoral Researcher</div>
+    <div class="profile-role">Doctoral Researcher, M. Sc. Mathematics</div>
     <p class="affiliation-details">
       <a href="https://logic.kastel.kit.edu/" target="_blank" rel="noopener">Logic of Autonomous Dynamical Systems</a><br />
       Supervised by Prof. Dr. André Platzer<br />
@@ -244,7 +238,7 @@ title: Vivien Ebert
 <div class="academic-section">
   <h2>Research Interests</h2>
   <p>
-    I am a first-year doctoral researcher at the Karlsruhe Institute of Technology (KIT) in the <a href="https://logic.kastel.kit.edu/" target="_blank" rel="noopener">Logic of Autonomous Dynamical Systems</a> group under the supervision of Prof. Dr. André Platzer. Previously, I graduated in Mathematics at KIT, where I specialized in Differential Geometry.
+    I am a first-year doctoral researcher at the Karlsruhe Institute of Technology (KIT) in the <a href="https://logic.kastel.kit.edu/" target="_blank" rel="noopener">Logic of Autonomous Dynamical Systems</a> group under the supervision of <a href="https://symbolaris.com/" target="_blank" rel="noopener">Prof. Dr. André Platzer</a>. Previously, I graduated in Mathematics at KIT, where I specialized in Differential Geometry.
   </p>
   <p>
     I am interested in bridging the gap between mathematics and logic. In particular, my research lies at the interface of <strong>Differential Dynamic Logic</strong> and <strong>Differential Geometry</strong>.
@@ -272,7 +266,7 @@ title: Vivien Ebert
 </div>
 
 <div class="bottom-links-section">
-  <a href="{{ '/assets/master_thesis.pdf' | relative_url }}" class="btn-academic btn-primary" target="_blank" rel="noopener">
+  <a href="assets/master_thesis.pdf" class="btn-academic btn-primary" target="_blank" rel="noopener">
     📄 Master's Thesis (PDF)
   </a>
   <a href="https://www.linkedin.com/in/vivien-ebert-6543411b8" class="btn-academic btn-outline" target="_blank" rel="noopener">
