@@ -1,72 +1,94 @@
-/* Custom CSS for Vivien Ebert's Professional Website */
-
-/* Import fonts */
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Open+Sans:wght@400;600&display=swap');
+/* Custom CSS for Vivien Ebert's Academic Website */
+/* This replaces the default Minima theme styling */
 
 :root {
-  --primary-color: #264d75;
-  --secondary-color: #4a6fa5;
+  --primary-color: #1a365d;
+  --secondary-color: #2c4a75;
   --accent-color: #166088;
   --light-color: #f8f9fa;
   --text-color: #333333;
-  --text-light: #666666;
+  --white: #ffffff;
 }
 
 /* Base styles */
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
   line-height: 1.6;
   color: var(--text-color);
   margin: 0;
   padding: 0;
-  background-color: #ffffff;
+  background-color: #f5f7fa;
 }
 
-/* Container for page content */
+/* Main container */
 .main-container {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 2rem 1.5rem;
 }
 
-/* Profile section */
+/* Site header - FIXED */
+.site-header {
+  background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+  color: var(--white);
+  padding: 2.5rem 2rem;
+  border-radius: 12px 12px 0 0;
+  text-align: center;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.site-header h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 0.2rem;
+  color: var(--white);
+  font-family: Georgia, serif;
+}
+
+.site-header .subtitle {
+  font-size: 1.2rem;
+  opacity: 0.95;
+  font-weight: 300;
+  letter-spacing: 1px;
+  color: var(--white);
+}
+
+/* Profile Container */
 .profile-container {
-  display: flex;
-  align-items: flex-start;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 2rem;
   margin-bottom: 2rem;
-  padding: 1.5rem;
-  background-color: var(--light-color);
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  padding: 2rem;
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
-.profile-image {
-  flex: 0 0 150px;
-  margin-right: 2rem;
-}
-
+/* Profile Image */
 .profile-image img {
-  width: 150px;
-  height: 150px;
+  width: 100%;
+  height: 200px;
   border-radius: 50%;
   object-fit: cover;
-  border: 3px solid var(--primary-color);
+  border: 4px solid var(--accent-color);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  position: relative;
+  top: 8px;
 }
 
-.profile-content {
-  flex: 1;
-}
-
+/* Profile Content */
 .profile-content h1 {
   color: var(--primary-color);
-  font-family: 'Lora', serif;
-  font-size: 2rem;
-  margin: 0.5rem 0;
-  line-height: 1.2;
+  font-size: 2.1rem;
+  font-family: Georgia, serif;
+  margin: 0.5rem 0 0.5rem;
+  line-height: 1.3;
 }
 
 .profile-content .subtitle {
-  font-family: 'Lora', serif;
+  font-family: Georgia, serif;
   font-style: italic;
   color: var(--secondary-color);
   font-size: 1.1rem;
@@ -74,14 +96,16 @@ body {
 }
 
 .affiliation p {
-  margin: 0.5rem 0;
+  margin-bottom: 0.75rem;
   font-size: 0.95rem;
+  line-height: 1.8;
 }
 
 .affiliation a {
   color: var(--secondary-color);
   text-decoration: none;
   font-weight: 600;
+  transition: color 0.3s;
 }
 
 .affiliation a:hover {
@@ -89,20 +113,70 @@ body {
   text-decoration: underline;
 }
 
-/* Links section */
-.links-section {
+/* Bio and Research Interests - NEW LAYOUT */
+.bio-interests-container {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 2rem;
   margin-bottom: 2rem;
-  padding: 1.5rem;
-  background-color: var(--light-color);
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
-.links-section h2 {
+.bio-section {
+  background-color: white;
+  padding: 1.8rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  border-left: 5px solid var(--accent-color);
+}
+
+.bio-section h2 {
   color: var(--accent-color);
-  font-family: 'Lora', serif;
-  margin-bottom: 1rem;
+  font-family: Georgia, serif;
   font-size: 1.4rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  border-bottom: 2px solid var(--light-color);
+  padding-bottom: 0.5rem;
+}
+
+.interests-section {
+  background-color: white;
+  padding: 1.8rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.interests-section h2 {
+  color: var(--accent-color);
+  font-family: Georgia, serif;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.interests-content p {
+  font-size: 0.96rem;
+  line-height: 1.8;
+  color: #444;
+}
+
+/* Links Section */
+.links-section, .contact-section {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  margin-bottom: 2rem;
+}
+
+.links-section h2, .contact-section h2 {
+  color: var(--accent-color);
+  font-family: Georgia, serif;
+  margin-bottom: 1.5rem;
+  font-size: 1.45rem;
+  font-weight: 700;
+  border-bottom: 2px solid var(--light-color);
+  padding-bottom: 0.75rem;
 }
 
 .link-list {
@@ -113,47 +187,38 @@ body {
 
 .link-item {
   display: block;
-  margin-bottom: 0.75rem;
-  padding: 0.75rem 1rem;
+  margin-bottom: 1.1rem;
+  padding: 1.25rem 1.5rem;
   background-color: white;
-  border-radius: 6px;
+  border-radius: 8px;
   text-decoration: none;
   color: var(--text-color);
   font-weight: 500;
   transition: all 0.3s ease;
-  border: 1px solid transparent;
+  border: 2px solid transparent;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  font-size: 0.96rem;
 }
 
 .link-item:hover {
-  background-color: #f0f4f8;
   border-color: var(--accent-color);
   transform: translateX(5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+  background-color: #f8f9fa;
 }
 
 .link-icon {
   display: inline-block;
-  margin-right: 0.75rem;
-  font-size: 1.1rem;
+  margin-right: 12px;
+  font-size: 1.2rem;
+  color: var(--secondary-color);
 }
 
-/* Contact section */
-.contact-section {
-  margin-bottom: 2rem;
-  padding: 1.5rem;
-  background-color: var(--light-color);
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-}
-
-.contact-section h2 {
-  color: var(--accent-color);
-  font-family: 'Lora', serif;
-  margin-bottom: 1rem;
-  font-size: 1.4rem;
-}
-
+/* Contact Section */
 .contact-section p {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  font-size: 0.97rem;
+  font-weight: 500;
 }
 
 .contact-section a {
@@ -167,121 +232,137 @@ body {
   text-decoration: underline;
 }
 
-/* Responsive design */
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 1.5rem;
+  color: #666;
+  font-size: 0.92rem;
+  border-top: 1px solid #e5e7eb;
+  margin-top: 2rem;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .bio-interests-container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .profile-container {
+    grid-template-columns: 150px 1fr;
+    gap: 1.5rem;
+  }
+  
+  .site-header h1 {
+    font-size: 2.3rem;
+  }
+  
+  .site-header .subtitle {
+    font-size: 1.1rem;
+  }
+}
+
 @media (max-width: 768px) {
   .profile-container {
-    flex-direction: column;
-    text-align: center;
+    grid-template-columns: 120px 1fr;
+    gap: 1rem;
+    padding: 1.5rem;
   }
   
-  .profile-image {
-    margin-right: 0;
-    margin-bottom: 1rem;
+  .bio-interests-container {
+    grid-template-columns: 1fr;
   }
   
-  .profile-content h1 {
-    font-size: 1.7rem;
+  .site-header {
+    padding: 2rem 1.5rem;
+    border-radius: 12px;
+  }
+  
+  .site-header h1 {
+    font-size: 2.1rem;
+  }
+  
+  .site-header .subtitle {
+    font-size: 1rem;
+  }
+  
+  .link-item {
+    padding: 1rem 1.2rem;
+    font-size: 0.93rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .profile-container {
+    grid-template-columns: 100px 1fr;
+  }
+  
+  .profile-image img {
+    height: 150px;
   }
   
   .main-container {
     padding: 1rem;
   }
-}
-
-/* Mobile optimization */
-@media (max-width: 480px) {
-  .profile-image img {
-    width: 120px;
-    height: 120px;
-  }
-  
-  .profile-content h1 {
-    font-size: 1.5rem;
-  }
   
   .link-item {
-    padding: 0.6rem 1rem;
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .link-icon {
+    font-size: 1.1rem;
+    margin-right: 10px;
   }
 }
 
-/* Typographic styles */
+/* Typography */
 h1, h2, h3, h4 {
-  font-family: 'Lora', serif;
-  font-weight: 600;
+  font-family: Georgia, serif;
 }
 
-h1 { font-size: 2.2rem; }
-h2 { font-size: 1.5rem; }
-h3 { font-size: 1.3rem; }
+h1 { font-weight: 700; }
+h2 { font-weight: 700; }
+h3 { font-weight: 600; }
 
-p {
-  margin-bottom: 1rem;
-}
-
-/* Responsive table for academic papers (if needed in future) */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 1.5rem;
-}
-
-table th, table td {
-  padding: 0.75rem;
-  border: 1px solid #ddd;
-}
-
-table th {
-  background-color: var(--light-color);
-  text-align: left;
-}
-
-table tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-/* Footer */
-.footer {
-  text-align: center;
-  padding: 1.5rem;
-  color: var(--text-light);
-  font-size: 0.85rem;
-  margin-top: 2rem;
-}
-
-/* Minima overrides */
-.site-header {
-  background-color: var(--primary-color);
-}
-
-.site-header .page-link {
-  color: white;
-}
-
-.site-header .page-link:hover {
-  color: #e0e0e0;
-}
-
-/* Syntax highlighting for code blocks (if needed) */
-.highlight pre,
-.highlight code {
-  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+/* Mobile optimization - better touch targets */
+@media (hover: none) {
+  .link-item {
+    padding: 1.5rem;
+  }
 }
 
 /* Print styles */
 @media print {
-  .profile-container, .links-section, .contact-section {
-    page-break-inside: avoid;
-    box-shadow: none;
-    border-radius: 0;
-  }
-  
   body {
-    background-color: white;
+    background: white;
     color: black;
   }
   
-  .main-container {
-    max-width: 100%;
-    padding: 0.5in;
+  .site-header, .profile-container, .bio-interests-container, 
+  .links-section, .contact-section {
+    page-break-inside: avoid;
+    box-shadow: none;
+  }
+  
+  .link-item {
+    border: 1px solid #ddd !important;
+  }
+}
+
+/* Accessibility - focus styles */
+:focus {
+  outline: 3px solid #4dabf7;
+  outline-offset: 2px;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: more) {
+  .link-item:hover {
+    background-color: #e2e8f0;
   }
 }
